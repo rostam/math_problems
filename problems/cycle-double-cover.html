@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cycle Double Cover Conjecture · Open Problems</title>
+<meta name="description" content="Take any graph with no bridge, meaning no single edge whose removal disconnects it. Can you always pick a collection of cycles that covers every edge exactly twice?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 21 · Graph theory</div>
+      <h1>Cycle Double Cover Conjecture</h1>
+      <p>Take any graph with no bridge, meaning no single edge whose removal disconnects it. Can you always pick a collection of cycles that covers every edge exactly twice?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every bridgeless graph has a collection of cycles such that every edge lies in exactly two of them.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Szekeres (1973), Seymour (1979)</div></div>
+      <div class="fact"><div class="k">Minimal counterexample</div><div class="v">Must be a snark</div></div>
+      <div class="fact"><div class="k">Known</div><div class="v">Covers of every edge exactly 4 or 6 times</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>For planar graphs it is easy: the boundaries of the faces cover every edge twice. The conjecture says every bridgeless graph behaves as if it could be drawn on <em>some</em> surface with every face bounded by a cycle. That links it to <strong>surface embeddings</strong>.</p>
+      <p>It sits in a cluster of central conjectures about <strong>snarks</strong> and <strong>flows</strong>, including Tutte's 5-flow conjecture and the Berge–Fulkerson conjecture. Progress on one often informs the others.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. It is true for planar graphs, for cubic graphs with a 3-edge-coloring, and for graphs with a nowhere-zero 4-flow (Jaeger), among others.</p>
+      <p>A smallest counterexample must be a <strong>snark</strong>: a cubic graph that cannot be 3-edge-colored, like the Petersen graph. It is known that such a counterexample would need very large girth (shortest cycle length).</p>
+      <p>Weaker versions are proven. Every bridgeless graph has a family of even subgraphs covering each edge exactly 4 times (Bermond, Jackson and Jaeger, 1983) or exactly 6 times (Fan, 1992). "Exactly twice" remains open.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1973</span>Szekeres poses the problem for cubic graphs.</li>
+        <li><span class="yr">1979</span>Seymour poses it for all bridgeless graphs.</li>
+        <li><span class="yr">1979</span>Jaeger shows graphs with a nowhere-zero 4-flow have a cycle double cover.</li>
+        <li><span class="yr">1983</span>Bermond, Jackson and Jaeger: a 4-fold cover by 7 even subgraphs.</li>
+        <li><span class="yr">1992</span>Fan: a 6-fold cover by 10 even subgraphs.</li>
+        <li><span class="yr">2000s</span>Minimal counterexamples are shown to need large girth. Computers verify snarks up to large sizes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Study snarks.</strong> Since counterexamples must be snarks, understanding their structure is the main line of attack. Computer enumerations of snarks up to 36 or more vertices have found none that fail.</li>
+        <li><strong>Flows.</strong> Strengthen flow results (for example, a proof of Tutte's 5-flow conjecture) and relate them to cycle covers.</li>
+        <li><strong>Strong embeddings.</strong> Prove that every 2-connected graph embeds in some surface with every face a cycle. That would imply the conjecture.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>The Petersen graph has 15 edges, so a double cover needs total cycle length 30. Find six 5-cycles in the Petersen graph that together use every edge exactly twice. Then do the same for the cube using its 6 faces.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="lovasz.html">← Lovász Conjecture</a>
+    <a class="next" href="total-coloring.html">Total Coloring Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graceful Tree Conjecture · Open Problems</title>
+<meta name="description" content="A tree is a connected graph with no loops. Take any tree with n vertices. Can you label its vertices 0, 1, …, n−1 so that the edge differences |a − b| are exactly 1, 2, …, n−1, each used once?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 16 · Graph theory</div>
+      <h1>Graceful Tree Conjecture</h1>
+      <p>A tree is a connected graph with no loops. Take any tree with n vertices. Can you label its vertices 0, 1, …, n−1 so that the edge differences |a − b| are exactly 1, 2, …, n−1, each used once?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every tree has a <em>graceful labeling</em>: its <em>n</em> vertices can be labeled with 0, 1, …, <em>n</em>−1 so that the <em>n</em>−1 edge labels |<em>a</em> − <em>b</em>| are all distinct.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Ringel–Kotzig, via Rosa, 1960s</div></div>
+      <div class="fact"><div class="k">Verified</div><div class="v">All trees up to 35 vertices</div></div>
+      <div class="fact"><div class="k">Ringel's conjecture</div><div class="v">Proven for large n (2020)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>Graceful labelings were introduced by Rosa to attack <strong>Ringel's conjecture</strong>: the complete graph on 2<em>n</em>+1 vertices can be split into 2<em>n</em>+1 copies of <em>any</em> tree with <em>n</em> edges. A graceful labeling gives such a split immediately by "rotating" the tree.</p>
+      <p>Graph decompositions like this are used in the design of experiments, error-correcting codes and scheduling.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. The conjecture is proven for paths, stars, caterpillars (trees where every vertex is on or next to a central path), trees with at most 4 leaves, and many other families. It has been checked by computer for every tree with up to 35 vertices.</p>
+      <p>Ringel's conjecture itself was proven for all large <em>n</em> in 2020, independently by Montgomery–Pokrovskiy–Sudakov and by Keevash–Staden. They used probabilistic "absorption" methods instead of graceful labelings.</p>
+      <p>Montgomery and Pokrovskiy also showed that every tree has an <em>almost</em> graceful labeling, where all but a tiny fraction of edge labels are distinct.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1963</span>Ringel poses his decomposition conjecture.</li>
+        <li><span class="yr">1967</span>Rosa introduces "β-valuations" (later called graceful labelings). The conjecture that every tree is graceful becomes known as the Ringel–Kotzig conjecture.</li>
+        <li><span class="yr">1970s–2000s</span>Hundreds of papers prove special cases. Gallian's dynamic survey lists thousands of results on graph labelings.</li>
+        <li><span class="yr">2010</span>Computer verification reaches all trees with up to 35 vertices.</li>
+        <li><span class="yr">2020</span>Ringel's conjecture proven for large <em>n</em> (Montgomery–Pokrovskiy–Sudakov; Keevash–Staden).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Absorption and randomness.</strong> Label most of the tree randomly, keep a flexible reserve, and use it to fix the remaining conflicts. This works approximately. Making it exact is the challenge.</li>
+        <li><strong>Transformations.</strong> Find operations that turn a graceful labeling of one tree into a graceful labeling of a modified tree, and connect every tree to a known graceful one.</li>
+        <li><strong>Structural induction.</strong> Handle trees by their diameter, number of leaves or other structure, extending the long list of proven classes.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw a star with 4 leaves and label the center 0 and the leaves 1, 2, 3, 4. That's graceful. Now draw a path with 5 vertices and try labeling it 0, 4, 1, 3, 2. Check the differences. Then pick a random tree with 7 vertices and find a graceful labeling by hand.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="reconstruction.html">← Reconstruction Conjecture (Kelly–Ulam)</a>
+    <a class="next" href="hadwiger.html">Hadwiger's Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

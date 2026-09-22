@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riemann Hypothesis · Open Problems</title>
+<meta name="description" content="A claim about where the zeros of a certain function lie. Put simply, it says the primes are spread out as evenly as they can be.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 5 · Number theory</div>
+      <h1>Riemann Hypothesis</h1>
+      <p>A claim about where the zeros of a certain function lie. Put simply, it says the primes are spread out as evenly as they can be.</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every non-trivial zero of the Riemann zeta function ζ(<em>s</em>) = 1 + 2<sup>−<em>s</em></sup> + 3<sup>−<em>s</em></sup> + ⋯ has real part exactly 1/2.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Bernhard Riemann, 1859</div></div>
+      <div class="fact"><div class="k">Prize</div><div class="v">$1,000,000 (Clay Millennium Problem)</div></div>
+      <div class="fact"><div class="k">Zeros checked</div><div class="v">more than 10¹³, all on the line</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>Riemann found an exact formula linking the primes to the zeros of ζ. Each zero contributes a "wave" to the count of primes. The hypothesis is equivalent to saying the number of primes up to <em>x</em> differs from the smooth estimate Li(<em>x</em>) by at most about √<em>x</em> · ln <em>x</em>. That is the smallest error one could hope for, so the primes would be as regular as possible.</p>
+      <p>Hundreds of theorems are proved "assuming RH" or its generalizations. One example: under the generalized RH, the Miller primality test is deterministic and fast. A proof would upgrade all of them at once.</p>
+      <p>It sits at a crossroads of number theory, analysis, random matrix theory and even quantum physics.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Numerically, more than ten trillion zeros have been checked and all lie on the critical line. Theoretically, we know a positive proportion of zeros lie on the line: currently over 41%.</p>
+      <p>The analogue of RH for curves and varieties over finite fields is <em>proven</em>, by Weil and later Deligne, and it is one of the triumphs of 20th-century mathematics. Many hope a similar structure can be found for the integers.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1859</span>Riemann's only paper on number theory states the hypothesis.</li>
+        <li><span class="yr">1896</span>Hadamard and de la Vallée Poussin prove the prime number theorem by showing no zeros lie on the line Re(<em>s</em>) = 1.</li>
+        <li><span class="yr">1914</span>Hardy proves infinitely many zeros lie on the critical line.</li>
+        <li><span class="yr">1942</span>Selberg shows a positive proportion do.</li>
+        <li><span class="yr">1948–74</span>Weil (curves) and then Deligne (general varieties) prove the finite-field analogue.</li>
+        <li><span class="yr">1973</span>Montgomery and Dyson notice that spacings between zeros match eigenvalues of random matrices.</li>
+        <li><span class="yr">1989</span>Conrey: at least 40% of zeros are on the line.</li>
+        <li><span class="yr">2018</span>Rodgers and Tao prove the de Bruijn–Newman constant Λ ≥ 0. Since RH is equivalent to Λ ≤ 0, RH is true "only barely", if at all.</li>
+        <li><span class="yr">2024</span>Guth and Maynard improve Ingham's 1940 bound on zeros away from the line, the first major advance there in 80 years.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Hilbert–Pólya.</strong> Find a natural self-adjoint operator whose eigenvalues are the zeros. Self-adjointness would force them onto the line. The random-matrix statistics strongly suggest such an operator exists.</li>
+        <li><strong>Copy the finite-field proof.</strong> Deligne's proof uses cohomology and a Frobenius action. The dream is a "field with one element" or some other geometry in which the integers behave like a curve.</li>
+        <li><strong>Zero-density and moment estimates.</strong> Incremental progress, such as Guth–Maynard, shows fewer zeros can stray from the line. This doesn't prove RH, but it gives many of its consequences unconditionally.</li>
+        <li><strong>Positivity criteria.</strong> RH is equivalent to many positivity statements, for example Li's criterion and Weil's explicit formula. Proving one of them directly is another route.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Compare π(<em>x</em>), the number of primes up to <em>x</em>, with Li(<em>x</em>) for <em>x</em> = 1,000, 10,000 and 100,000 using any online calculator. See how small the difference is compared with √<em>x</em>.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="odd-perfect-numbers.html">← Odd Perfect Numbers</a>
+    <a class="next" href="legendre.html">Legendre's Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

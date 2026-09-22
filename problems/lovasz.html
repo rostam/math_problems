@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lovász Conjecture · Open Problems</title>
+<meta name="description" content="Call a graph &quot;symmetric&quot; if every vertex looks exactly like every other vertex. Does every connected symmetric graph have a path that visits each vertex exactly once?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 20 · Graph theory</div>
+      <h1>Lovász Conjecture</h1>
+      <p>Call a graph "symmetric" if every vertex looks exactly like every other vertex. Does every connected symmetric graph have a path that visits each vertex exactly once?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every finite connected vertex-transitive graph has a Hamiltonian path.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">László Lovász, 1969</div></div>
+      <div class="fact"><div class="k">Known graphs without a Hamiltonian cycle</div><div class="v">Only 5</div></div>
+      <div class="fact"><div class="k">Cayley graph version</div><div class="v">Also open</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It links <strong>symmetry</strong> (group theory) and <strong>traversal</strong> (Hamiltonicity). Finding Hamiltonian paths is NP-hard in general, so the conjecture says symmetry makes an otherwise hard problem always solvable.</p>
+      <p>For Cayley graphs of groups, a Hamiltonian cycle lists every element of the group, moving by one generator at a time. <strong>Gray codes</strong>, which list binary strings changing one bit at a time, are the hypercube case.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Only five connected vertex-transitive graphs are known that lack a Hamiltonian <em>cycle</em>: <em>K</em>₂, the Petersen graph, the Coxeter graph, and the two graphs obtained from Petersen and Coxeter by replacing each vertex with a triangle. All five still have Hamiltonian <em>paths</em>.</p>
+      <p>For <strong>Cayley graphs</strong>, a special kind of vertex-transitive graph, the stronger conjecture is that every connected one on 3 or more vertices has a Hamiltonian cycle. This is proven for abelian groups, for groups of prime-power order (Witte, 1986), and for many groups of special orders.</p>
+      <p>Dense vertex-transitive graphs are Hamiltonian (Christofides, Hladký and Máthé, 2014). Some experts, notably Babai, suspect the general conjecture may be false.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1953</span>Gray codes (patented by Frank Gray) give Hamiltonian cycles on hypercubes.</li>
+        <li><span class="yr">1969</span>Lovász poses the problem, originally phrased as a challenge to find a counterexample.</li>
+        <li><span class="yr">1986</span>Witte: Cayley graphs of <em>p</em>-groups have Hamiltonian cycles.</li>
+        <li><span class="yr">2014</span>Christofides, Hladký and Máthé: dense vertex-transitive graphs are Hamiltonian.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Factor group lemma.</strong> Find a Hamiltonian cycle in a quotient graph and "lift" it to the full Cayley graph. This is the main tool in the Cayley case.</li>
+        <li><strong>Classify by order.</strong> Prove it for all vertex-transitive graphs whose number of vertices has a given form (<em>p</em>, 2<em>p</em>, <em>p</em><sup>2</sup>, <em>pq</em>, …) and expand the list.</li>
+        <li><strong>Search for counterexamples.</strong> Computer searches over small vertex-transitive graphs continue. A sixth non-Hamiltonian example would be big news.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw the 3-dimensional cube (8 vertices, labeled with binary strings 000 to 111). Find a closed tour that changes one bit at a time: 000, 001, 011, 010, 110, 111, 101, 100. That's a Gray code. Then find a path through all 10 vertices of the Petersen graph. It exists, but no matter how you try, you can't close it into a cycle.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="second-neighborhood.html">← Seymour's Second Neighborhood Conjecture</a>
+    <a class="next" href="cycle-double-cover.html">Cycle Double Cover Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

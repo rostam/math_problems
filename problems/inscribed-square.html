@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscribed Square Problem (Toeplitz) · Open Problems</title>
+<meta name="description" content="Does every closed loop drawn without crossing itself contain four points that form a square?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 8 · Geometry and combinatorics</div>
+      <h1>Inscribed Square Problem (Toeplitz)</h1>
+      <p>Does every closed loop drawn without crossing itself contain four points that form a square?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every Jordan curve (a continuous closed loop in the plane that does not cross itself) contains four points that are the corners of a square.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Otto Toeplitz, 1911</div></div>
+      <div class="fact"><div class="k">Proven for</div><div class="v">Convex, smooth and many other curves</div></div>
+      <div class="fact"><div class="k">Rectangles</div><div class="v">Every Jordan curve inscribes one</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It is one of the simplest open questions in geometry: a child can understand it. Yet it touches deep topology, because "continuous curve" includes wildly wiggly, fractal-like loops.</p>
+      <p>Recent progress used <strong>symplectic geometry</strong>, a field born from physics. So this elementary problem has become a showcase for powerful modern tools.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open for general continuous curves. It is proven for convex curves, piecewise-analytic curves, smooth curves, locally monotone curves and several other large classes.</p>
+      <p>The difficulty is a limit problem. Approximate a wild curve by smooth ones, each of which contains a square. Those squares might shrink to a single point in the limit, and a point is not a square.</p>
+      <p>In 2020 Greene and Lobb proved that every <em>smooth</em> Jordan curve contains a rectangle of <em>every</em> aspect ratio, not just squares. The proof uses Lagrangian tori in four-dimensional space.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1911</span>Toeplitz announces the problem.</li>
+        <li><span class="yr">1913</span>Emch proves it for convex curves.</li>
+        <li><span class="yr">1929</span>Schnirelmann proves it for sufficiently smooth curves.</li>
+        <li><span class="yr">1977</span>Vaughan gives a beautiful proof, using a Möbius strip, that every Jordan curve contains a <em>rectangle</em>.</li>
+        <li><span class="yr">1989</span>Stromquist proves it for "locally monotone" curves, a large class.</li>
+        <li><span class="yr">2017</span>Tao proves it for curves formed by two Lipschitz graphs with constant less than 1.</li>
+        <li><span class="yr">2020</span>Greene and Lobb: smooth curves contain rectangles of every aspect ratio.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Control the size of the square.</strong> Show that for any curve enclosing a region of a given area, some inscribed square has size bounded below. Then limits of approximations can't collapse.</li>
+        <li><strong>Symplectic topology.</strong> Extend Greene and Lobb's Lagrangian methods from smooth curves to rougher ones.</li>
+        <li><strong>Parity and counting.</strong> For generic smooth curves, the number of inscribed squares is odd. Find a version of that invariant that survives for continuous curves.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw a random closed loop on paper, the stranger the better, and try to find a square with its four corners on the loop. Rotating a transparent square template helps. It seems always possible, which is why the problem is so tantalizing.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="p-vs-np.html">← P vs NP</a>
+    <a class="next" href="moving-sofa.html">Moving Sofa Problem →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

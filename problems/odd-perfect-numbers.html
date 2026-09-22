@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odd Perfect Numbers · Open Problems</title>
+<meta name="description" content="A perfect number equals the sum of its proper divisors: 6 = 1 + 2 + 3, and 28 = 1 + 2 + 4 + 7 + 14. Every known perfect number is even. Does an odd one exist?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 4 · Number theory</div>
+      <h1>Odd Perfect Numbers</h1>
+      <p>A perfect number equals the sum of its proper divisors: 6 = 1 + 2 + 3, and 28 = 1 + 2 + 4 + 7 + 14. Every known perfect number is even. Does an odd one exist?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> There is no odd number <em>n</em> whose divisors (including <em>n</em>) add up to 2<em>n</em>.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First studied</div><div class="v">Euclid, c. 300 BC</div></div>
+      <div class="fact"><div class="k">Known perfect numbers</div><div class="v">52, all even</div></div>
+      <div class="fact"><div class="k">An odd one would be</div><div class="v">greater than 10¹⁵⁰⁰</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It may be the oldest unsolved problem in mathematics, going back to the ancient Greeks.</p>
+      <p>Even perfect numbers are completely understood. By Euclid and Euler, they are exactly the numbers 2<sup><em>p</em>−1</sup>(2<sup><em>p</em></sup> − 1) where 2<sup><em>p</em></sup> − 1 is a Mersenne prime. The odd case resists every approach, so it is a benchmark for how well we understand the divisor-sum function.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open, but an odd perfect number is squeezed by a long list of constraints. Among them:</p>
+      <ul><li>It must exceed 10¹⁵⁰⁰ (Ochem and Rao, 2012).</li><li>It must have at least 10 distinct prime factors (Nielsen, 2015).</li><li>It must have the form <em>p</em><sup>α</sup><em>m</em>² with <em>p</em> ≡ α ≡ 1 (mod 4), a fact already known to Euler.</li><li>Its largest prime factor must exceed 10⁸.</li></ul>
+      <p>A heuristic argument of Pomerance suggests none exist, but no proof is in sight.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">c. 300 BC</span>Euclid shows 2<sup><em>p</em>−1</sup>(2<sup><em>p</em></sup> − 1) is perfect when 2<sup><em>p</em></sup> − 1 is prime.</li>
+        <li><span class="yr">1638</span>Descartes finds the "spoof" 198585576189 = 3²·7²·11²·13²·22021. It would be an odd perfect number if 22021 were prime (it is 19²·61).</li>
+        <li><span class="yr">1747</span>Euler proves every even perfect number has Euclid's form, and shows an odd one must have the form <em>p</em><sup>α</sup><em>m</em>².</li>
+        <li><span class="yr">1913</span>Dickson proves there are only finitely many odd perfect numbers with a given number of prime factors.</li>
+        <li><span class="yr">2012</span>Ochem and Rao push the lower bound past 10¹⁵⁰⁰.</li>
+        <li><span class="yr">2015</span>Nielsen shows at least 10 distinct prime factors are needed.</li>
+        <li><span class="yr">2024</span>The 52nd Mersenne prime, 2<sup>136279841</sup> − 1, gives the 52nd known (even) perfect number.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Tighten the constraints until they conflict.</strong> Most progress comes from adding more necessary conditions and hoping they eventually contradict each other. Computer searches over factorization trees are central to this.</li>
+        <li><strong>Study spoofs.</strong> Recent work (for example, the Brigham Young University group) looks at "spoof" perfect numbers like Descartes's, where some factor is treated as if it were prime. Understanding why spoofs exist while real odd perfect numbers (apparently) don't may show where a proof has to bite.</li>
+        <li><strong>Density arguments.</strong> Proving that odd perfect numbers up to <em>x</em> number fewer than any power of <em>x</em> is known. Upgrading this to zero needs a genuinely new idea.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Check that 496 and 8128 are perfect. Then take an odd number with lots of divisors, like 945 = 3³·5·7. Its divisors sum to more than 2 × 945 (it is "abundant"). Odd abundant numbers exist, so why can't one land exactly on 2<em>n</em>?</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="collatz.html">← Collatz Conjecture</a>
+    <a class="next" href="riemann-hypothesis.html">Riemann Hypothesis →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

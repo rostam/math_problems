@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hadwiger–Nelson Problem · Open Problems</title>
+<meta name="description" content="What is the fewest colors needed to color every point of the plane so that no two points exactly 1 unit apart share a color?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 10 · Geometry and combinatorics</div>
+      <h1>Hadwiger–Nelson Problem</h1>
+      <p>What is the fewest colors needed to color every point of the plane so that no two points exactly 1 unit apart share a color?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Determine the chromatic number of the plane: the least number of colors such that no two points at distance exactly 1 receive the same color.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Edward Nelson, 1950</div></div>
+      <div class="fact"><div class="k">Lower bound</div><div class="v">5 (de Grey, 2018)</div></div>
+      <div class="fact"><div class="k">Upper bound</div><div class="v">7 (hexagon tiling)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It connects geometry, graph coloring and even the foundations of mathematics. Shelah and Soifer showed that for related problems, the answer can depend on which axioms of set theory you accept, such as the axiom of choice.</p>
+      <p>The 2018 lower bound was found by an amateur mathematician, Aubrey de Grey, with computer help. That makes it a striking example of how outsiders and computation can move a famous problem.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>The answer is 5, 6 or 7.</p>
+      <ul><li><strong>7 colors suffice:</strong> tile the plane with hexagons of diameter slightly less than 1 and color them in a repeating 7-color pattern.</li><li><strong>At least 4 are needed:</strong> the Moser spindle, a graph with 7 points, cannot be 3-colored.</li><li><strong>At least 5 are needed:</strong> de Grey found a unit-distance graph with 1,581 vertices that cannot be 4-colored. The Polymath16 project later shrank it to about 500 vertices.</li></ul>
+      <p>If the color classes must be measurable sets, at least 5 colors were known to be needed since Falconer (1981).</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1950</span>Nelson poses the problem. Isbell observes the 7-color hexagon tiling.</li>
+        <li><span class="yr">1961</span>Leo and William Moser find the Moser spindle, giving a lower bound of 4.</li>
+        <li><span class="yr">1981</span>Falconer: measurable colorings need at least 5 colors.</li>
+        <li><span class="yr">2003</span>Shelah and Soifer show that related answers can depend on the axiom of choice.</li>
+        <li><span class="yr">2018</span>Aubrey de Grey proves at least 5 colors are needed. Polymath16 simplifies the construction.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Find a 6-chromatic unit-distance graph.</strong> Use SAT solvers and clever constructions to raise the lower bound to 6.</li>
+        <li><strong>Find a 6-coloring.</strong> No known tiling uses 6 colors, and many natural candidates provably fail. A new periodic or aperiodic pattern would lower the upper bound.</li>
+        <li><strong>Restricted versions.</strong> Settle the problem for colorings whose color classes are nice shapes (for example, polygons with boundaries). This is the likeliest route to the true answer.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw the Moser spindle: two rhombi, each made of two equilateral triangles with side 1, sharing one vertex and rotated so that their far tips are exactly 1 apart. Try to 3-color its 7 points so that no unit edge joins two points of the same color. It can't be done.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="moving-sofa.html">← Moving Sofa Problem</a>
+    <a class="next" href="union-closed-sets.html">Union-Closed Sets Conjecture (Frankl) →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

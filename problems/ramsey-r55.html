@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramsey number R(5,5) · Open Problems</title>
+<meta name="description" content="How many people must be at a party to guarantee that 5 of them all know each other, or 5 of them are all strangers? For groups of 3 the answer is 6, and for groups of 4 it is 18.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 14 · Graph theory</div>
+      <h1>Ramsey number R(5,5)</h1>
+      <p>How many people must be at a party to guarantee that 5 of them all know each other, or 5 of them are all strangers? For groups of 3 the answer is 6, and for groups of 4 it is 18.</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Find the smallest <em>N</em> such that every red/blue coloring of the edges of the complete graph on <em>N</em> vertices contains 5 vertices whose connecting edges are all the same color.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">Known range</div><div class="v">43 ≤ R(5,5) ≤ 46</div></div>
+      <div class="fact"><div class="k">R(3,3), R(4,4)</div><div class="v">6 and 18</div></div>
+      <div class="fact"><div class="k">Conjectured value</div><div class="v">43</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>Ramsey theory is the mathematics of "complete disorder is impossible": any large enough structure contains an orderly piece. R(5,5) is the smallest diagonal case we can't compute, so it is a benchmark for both theory and computation.</p>
+      <p>Erdős's 1947 lower bound for Ramsey numbers launched the <strong>probabilistic method</strong>, now one of the most important tools in combinatorics and computer science.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Exoo (1989) found a coloring on 42 vertices with no single-colored group of 5, so R(5,5) ≥ 43. In 2024, Angeltveit and McKay used massive computation to show R(5,5) ≤ 46. The widely believed answer is 43.</p>
+      <p>For large <em>k</em>, R(<em>k</em>,<em>k</em>) lies between roughly √2<sup><em>k</em></sup> and 4<sup><em>k</em></sup>. In 2023, Campos, Griffiths, Morris and Sahasrabudhe made the first exponential improvement to the upper bound in about 90 years, to below 3.993<sup><em>k</em></sup>.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1930</span>Frank Ramsey proves that Ramsey numbers exist.</li>
+        <li><span class="yr">1935</span>Erdős and Szekeres give the upper bound of about 4<sup><em>k</em></sup>.</li>
+        <li><span class="yr">1947</span>Erdős proves the lower bound √2<sup><em>k</em></sup> by showing a random coloring works. This is the birth of the probabilistic method.</li>
+        <li><span class="yr">1955</span>Greenwood and Gleason: R(3,3) = 6 and R(4,4) = 18.</li>
+        <li><span class="yr">1989</span>Exoo: R(5,5) ≥ 43.</li>
+        <li><span class="yr">1995–2018</span>Upper bound lowered step by step: 49, then 48.</li>
+        <li><span class="yr">2023</span>Campos–Griffiths–Morris–Sahasrabudhe: exponential improvement for R(<em>k</em>,<em>k</em>).</li>
+        <li><span class="yr">2024</span>Angeltveit and McKay: R(5,5) ≤ 46.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Smarter exhaustive search.</strong> Use symmetry reduction, SAT solvers and linear programming to rule out 2-colorings of 45, 44 and eventually 43 vertices.</li>
+        <li><strong>Flag algebras.</strong> Razborov's semidefinite-programming method gives computer-verified upper bounds for small Ramsey-type numbers.</li>
+        <li><strong>Better constructions.</strong> A 43-vertex coloring with no monochromatic 5-clique would disprove the conjecture that the answer is 43. Searches so far have found none.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Prove R(3,3) = 6. Take 6 people. Person A knows at least 3 of the others, or is a stranger to at least 3. Say A knows 3 people. If any two of them know each other, those two plus A are 3 mutual acquaintances. If not, those 3 are mutual strangers. Then find a 5-person coloring (hint: a pentagon and a pentagram) that avoids both patterns.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="pi-plus-e.html">← Is π + e irrational?</a>
+    <a class="next" href="reconstruction.html">Reconstruction Conjecture (Kelly–Ulam) →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hadwiger's Conjecture · Open Problems</title>
+<meta name="description" content="A far-reaching generalization of the Four Color Theorem. Suppose a graph needs k colors so that neighboring vertices get different colors. Then, by deleting and contracting edges, you should be able to shrink it into k vertices that are all joined to each other.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 17 · Graph theory</div>
+      <h1>Hadwiger's Conjecture</h1>
+      <p>A far-reaching generalization of the Four Color Theorem. Suppose a graph needs k colors so that neighboring vertices get different colors. Then, by deleting and contracting edges, you should be able to shrink it into k vertices that are all joined to each other.</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every graph with chromatic number at least <em>k</em> contains the complete graph <em>K<sub>k</sub></em> as a minor. Equivalently, graphs with no <em>K<sub>k</sub></em> minor can be colored with <em>k</em>−1 colors.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Hugo Hadwiger, 1943</div></div>
+      <div class="fact"><div class="k">Proven for</div><div class="v">k ≤ 6</div></div>
+      <div class="fact"><div class="k">Best general bound</div><div class="v">O(k log log k) colors</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>Bollobás called it "one of the deepest unsolved problems in graph theory." It explains <em>why</em> graphs need many colors: the only reason would be a large, tightly connected core.</p>
+      <p>The case <em>k</em> = 5 is equivalent to the Four Color Theorem, so the conjecture is a vast generalization of that famous result.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Proven for <em>k</em> ≤ 6. The case <em>k</em> = 6 (Robertson, Seymour and Thomas, 1993) reduces to the Four Color Theorem. Open for every <em>k</em> ≥ 7.</p>
+      <p>It is known that graphs without a <em>K<sub>k</sub></em> minor can be colored with O(<em>k</em> log log <em>k</em>) colors (Delcourt and Postle, 2021, building on Norin–Postle–Song). Proving even O(<em>k</em>), a linear bound, remains open.</p>
+      <p>It holds for almost all graphs (Bollobás, Catlin and Erdős, 1980). Hajós's stronger conjecture, which asks for subdivisions instead of minors, is <em>false</em> (Catlin, 1979).</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1937</span>Wagner shows the <em>k</em> = 5 case is equivalent to the Four Color Conjecture.</li>
+        <li><span class="yr">1943</span>Hadwiger states the conjecture and proves it for <em>k</em> ≤ 4.</li>
+        <li><span class="yr">1976</span>Appel and Haken prove the Four Color Theorem, settling <em>k</em> = 5.</li>
+        <li><span class="yr">1980</span>Bollobás, Catlin and Erdős show it holds for almost all graphs.</li>
+        <li><span class="yr">1984</span>Kostochka and Thomason prove O(<em>k</em> √log <em>k</em>) colors suffice.</li>
+        <li><span class="yr">1993</span>Robertson, Seymour and Thomas prove <em>k</em> = 6.</li>
+        <li><span class="yr">2019–21</span>Norin, Postle and Song, then Delcourt and Postle, break the √log barrier: O(<em>k</em> log log <em>k</em>).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Linear Hadwiger.</strong> Prove that <em>Ck</em> colors suffice for some constant <em>C</em>. This is the natural next milestone.</li>
+        <li><strong>The case k = 7.</strong> Structure theory of graphs without a <em>K</em>₇ minor might settle it, but the analysis is expected to be enormous.</li>
+        <li><strong>Graph minor theory.</strong> Robertson and Seymour's structure theorem describes graphs without a given minor. Turning that description into colorings is a long-term program.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>The complete graph <em>K</em>₄ needs 4 colors and is itself a <em>K</em>₄ minor. Now take an odd cycle of length 5 (it needs 3 colors) and find a <em>K</em>₃ minor by contracting edges. Can you find a planar graph that needs 4 colors? Its <em>K</em>₄ minor should be easy to spot.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="graceful-tree.html">← Graceful Tree Conjecture</a>
+    <a class="next" href="erdos-gyarfas.html">Erdős–Gyárfás Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

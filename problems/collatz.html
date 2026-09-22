@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collatz Conjecture · Open Problems</title>
+<meta name="description" content="Pick any positive integer. If it's even, halve it. If it's odd, triple it and add 1. Does every starting number eventually reach 1?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 3 · Number theory</div>
+      <h1>Collatz Conjecture</h1>
+      <p>Pick any positive integer. If it's even, halve it. If it's odd, triple it and add 1. Does every starting number eventually reach 1?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> For every positive integer <em>n</em>, repeatedly applying <em>n</em> → <em>n</em>/2 (if even) or <em>n</em> → 3<em>n</em> + 1 (if odd) eventually reaches 1.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Lothar Collatz, 1937</div></div>
+      <div class="fact"><div class="k">Verified up to</div><div class="v">more than 2⁶⁸ ≈ 3 × 10²⁰</div></div>
+      <div class="fact"><div class="k">Best result</div><div class="v">Almost all orbits get almost bounded (Tao, 2019)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>On its own, the answer has few known consequences. It matters because it shows how badly current mathematics handles systems that mix multiplication with the digits of numbers in different bases. Here that means halving (base 2) and tripling (base 3).</p>
+      <p>It is also a model for a broad class of problems. Conway showed that natural generalizations of Collatz-type rules are <strong>undecidable</strong>: no algorithm can settle all of them. So any proof for the 3<em>n</em> + 1 rule must use something special about that rule.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Every number up to more than 2⁶⁸ has been checked. A counterexample would have to either climb to infinity or fall into a cycle other than 4 → 2 → 1. Any such cycle is known to be astronomically long.</p>
+      <p>In 2019 Terence Tao proved the strongest result so far: for <em>almost all</em> starting numbers, the orbit eventually falls below any slowly growing bound you choose. "Almost all" is meant in the sense of logarithmic density. This is very close to what one expects, but it does not rule out a few exceptional numbers.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1937</span>Lothar Collatz poses the problem.</li>
+        <li><span class="yr">1972</span>Conway shows generalized Collatz problems can be undecidable.</li>
+        <li><span class="yr">1976</span>Terras proves almost every number eventually drops below its starting value.</li>
+        <li><span class="yr">2003</span>Krasikov and Lagarias: at least <em>x</em><sup>0.84</sup> of the numbers up to <em>x</em> reach 1.</li>
+        <li><span class="yr">2019</span>Tao: almost all Collatz orbits attain almost bounded values.</li>
+        <li><span class="yr">2020s</span>Computer verification is pushed beyond 2⁶⁸. Researchers also recast the problem as rewriting systems to be attacked with SAT solvers (Yolcu, Aaronson and Heule).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Probabilistic heuristics.</strong> Each odd step followed by the halvings that come after it multiplies <em>n</em> by about 3/4 on average, so orbits should drift downward. Making this rigorous for <em>every</em> number, not just almost every number, is the core difficulty.</li>
+        <li><strong>2-adic dynamics.</strong> The map extends naturally to the 2-adic integers, where it is well understood (it is conjugate to a shift map). The challenge is to control what happens to ordinary integers inside that space.</li>
+        <li><strong>Automated reasoning.</strong> Encode the problem as termination of a string-rewriting system and search for a termination proof by computer. This has proven weaker variants, though not the full problem.</li>
+        <li><strong>Rule out cycles.</strong> Continued-fraction bounds on log₂3 already show that any other cycle must be enormous. Pushing these bounds further, alongside ruling out divergence, would cover both ways the conjecture could fail.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Start from 27 and follow the rule by hand or in a spreadsheet. It takes 111 steps to reach 1 and climbs as high as 9,232 along the way. Then try 26 or 28 for contrast.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="goldbach.html">← Goldbach's Conjecture</a>
+    <a class="next" href="odd-perfect-numbers.html">Odd Perfect Numbers →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

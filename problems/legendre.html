@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legendre's Conjecture · Open Problems</title>
+<meta name="description" content="Is there always a prime between n² and (n+1)²?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 6 · Number theory</div>
+      <h1>Legendre's Conjecture</h1>
+      <p>Is there always a prime between n² and (n+1)²?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> For every positive integer <em>n</em>, there is a prime between <em>n</em>² and (<em>n</em> + 1)².</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Adrien-Marie Legendre, c. 1800</div></div>
+      <div class="fact"><div class="k">Landau's problems</div><div class="v">One of Landau's four (1912)</div></div>
+      <div class="fact"><div class="k">Best known</div><div class="v">Primes in [<em>x</em>, <em>x</em> + <em>x</em><sup>0.525</sup>]</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It is a statement about <strong>primes in short intervals</strong>. The interval from <em>n</em>² to (<em>n</em>+1)² has length about 2√<em>x</em> when <em>x</em> = <em>n</em>². So the conjecture says that gaps between primes are always shorter than about 2√<em>x</em>.</p>
+      <p>Remarkably, even the Riemann Hypothesis doesn't imply it: RH gives gaps of size √<em>x</em> · ln <em>x</em>, which is just barely too weak. That makes it a good measure of how far beyond RH our understanding of primes has to go.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. The best unconditional result guarantees a prime in every interval [<em>x</em>, <em>x</em> + <em>x</em><sup>0.525</sup>] for large <em>x</em> (Baker, Harman and Pintz, 2001). Legendre needs exponent 1/2.</p>
+      <p>Ingham proved the cubic analogue in 1937: there is always a prime between <em>n</em>³ and (<em>n</em>+1)³ for large <em>n</em>. Later work made "large" explicit.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1845–52</span>Bertrand conjectures, and Chebyshev proves, that there is always a prime between <em>n</em> and 2<em>n</em>.</li>
+        <li><span class="yr">1912</span>Landau lists it among four "unattackable" problems about primes (the other three: Goldbach, twin primes, and primes of the form <em>n</em>² + 1).</li>
+        <li><span class="yr">1936</span>Cramér conjectures prime gaps are at most about (ln <em>x</em>)². This would imply Legendre easily.</li>
+        <li><span class="yr">1937</span>Ingham: primes between consecutive cubes (for large <em>n</em>).</li>
+        <li><span class="yr">2001</span>Baker, Harman and Pintz: a prime in [<em>x</em>, <em>x</em> + <em>x</em><sup>0.525</sup>].</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Lower the exponent.</strong> Each improvement from 0.525 toward 0.5 comes from sharper zero-density estimates and sieve refinements. The recent Guth–Maynard zero-density bound improves results about primes in short intervals "on average".</li>
+        <li><strong>Go beyond RH.</strong> Since RH alone is insufficient, a proof needs additional input, such as the pair-correlation conjecture or good control of zeros near the critical line.</li>
+        <li><strong>Averaged versions.</strong> Proving it holds for almost all <em>n</em> is already within reach of current methods. Upgrading "almost all" to "all" is the hard part.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>For <em>n</em> = 1 to 30, count the primes between <em>n</em>² and (<em>n</em>+1)². The minimum count stays at 1 or 2 for small <em>n</em> but trends upward. Does it look like it could ever hit 0?</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="riemann-hypothesis.html">← Riemann Hypothesis</a>
+    <a class="next" href="p-vs-np.html">P vs NP →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

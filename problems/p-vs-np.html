@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P vs NP · Open Problems</title>
+<meta name="description" content="If a solution is quick to check, is it also quick to find? Sudoku is an example: checking a filled grid is easy, but solving one seems hard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 7 · Computer science and logic</div>
+      <h1>P vs NP</h1>
+      <p>If a solution is quick to <em>check</em>, is it also quick to <em>find</em>? Sudoku is an example: checking a filled grid is easy, but solving one seems hard.</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Is every problem whose solutions can be verified in polynomial time (NP) also solvable in polynomial time (P)? Most researchers believe P ≠ NP.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">Formalized</div><div class="v">Cook (1971) and Levin (1973)</div></div>
+      <div class="fact"><div class="k">Prize</div><div class="v">$1,000,000 (Clay Millennium Problem)</div></div>
+      <div class="fact"><div class="k">NP-complete problems</div><div class="v">Thousands known</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>If P = NP with a practical algorithm, most public-key cryptography would break. Many hard optimization problems in logistics, chip design and biology would become easy. Even <em>finding mathematical proofs</em> would become roughly as easy as checking them.</p>
+      <p>If P ≠ NP, as expected, it would confirm that creativity and search are fundamentally harder than verification. It would also put the foundations of cryptography on firm ground.</p>
+      <p>Thousands of natural problems are NP-complete: Sudoku, scheduling, the traveling salesperson problem, protein folding models, Tetris and more. A fast algorithm for any one of them would solve all of them.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open, and widely considered one of the hardest problems in mathematics. Three proven "barriers" show that whole families of proof techniques cannot resolve it on their own: relativization, natural proofs and algebrization.</p>
+      <p>Researchers <em>can</em> prove strong lower bounds for restricted models of computation, such as constant-depth circuits and monotone circuits. Extending these to general circuits is the central challenge.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1956</span>Gödel asks von Neumann, in a letter, essentially this question.</li>
+        <li><span class="yr">1971</span>Cook proves that satisfiability (SAT) is NP-complete. Levin finds the same result independently in the USSR.</li>
+        <li><span class="yr">1972</span>Karp shows 21 classic problems are NP-complete.</li>
+        <li><span class="yr">1975</span>Baker, Gill and Solovay: the relativization barrier.</li>
+        <li><span class="yr">1981–87</span>Furst–Saxe–Sipser, Ajtai, Håstad: parity cannot be computed by small constant-depth circuits. Razborov proves exponential lower bounds for monotone circuits.</li>
+        <li><span class="yr">1994</span>Razborov and Rudich: the natural proofs barrier.</li>
+        <li><span class="yr">2008</span>Aaronson and Wigderson: the algebrization barrier.</li>
+        <li><span class="yr">2011</span>Ryan Williams proves NEXP ⊄ ACC⁰ by turning faster algorithms into lower bounds.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Circuit lower bounds.</strong> Show that some NP problem requires super-polynomial circuit size. Progress here has been slow but real.</li>
+        <li><strong>Algorithms to lower bounds.</strong> Williams's program shows that even slightly faster-than-brute-force algorithms for circuit problems imply new lower bounds. It is one of the few approaches known to get around the barriers.</li>
+        <li><strong>Geometric Complexity Theory.</strong> Mulmuley and Sohoni use algebraic geometry and representation theory to separate algebraic analogues of P and NP (permanent vs determinant).</li>
+        <li><strong>Proof complexity.</strong> Show that certain proof systems need super-polynomially long proofs of some tautologies. Doing this for every proof system would prove NP ≠ coNP, and hence P ≠ NP.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Solve a hard Sudoku and time yourself. Then have a friend check your solution and time them. The gap between those two times is the intuition behind P vs NP.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="legendre.html">← Legendre's Conjecture</a>
+    <a class="next" href="inscribed-square.html">Inscribed Square Problem (Toeplitz) →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

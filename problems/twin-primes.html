@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Prime Conjecture · Open Problems</title>
+<meta name="description" content="Are there infinitely many pairs of primes that differ by 2, like (3, 5), (11, 13) and (17, 19)?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 1 · Number theory</div>
+      <h1>Twin Prime Conjecture</h1>
+      <p>Are there infinitely many pairs of primes that differ by 2, like (3, 5), (11, 13) and (17, 19)?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> There are infinitely many primes <em>p</em> such that <em>p</em> + 2 is also prime.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Implicit since antiquity; stated by de Polignac, 1849</div></div>
+      <div class="fact"><div class="k">Best result</div><div class="v">Infinitely many gaps ≤ 246</div></div>
+      <div class="fact"><div class="k">Largest known pair</div><div class="v">388,342 digits (2016)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>Primes are the atoms of arithmetic, and the twin prime question asks something basic about how they are spaced. The prime number theorem says the <em>average</em> gap near <em>x</em> is about ln <em>x</em>, which grows without bound. The conjecture says that, despite this, the smallest possible gap keeps recurring forever.</p>
+      <p>Hardy and Littlewood made a precise prediction: the number of twin primes up to <em>x</em> should be about 1.32 · <em>x</em> / (ln <em>x</em>)². Computer counts match this prediction extremely well. Proving it would show that primes behave like random numbers in a deep, quantitative way.</p>
+      <p>The problem has also driven the development of <strong>sieve methods</strong>, one of the main toolkits of analytic number theory.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. The breakthrough of the last decade is that <em>bounded</em> gaps are now proven: there is some fixed number <em>H</em> such that infinitely many pairs of primes differ by at most <em>H</em>. The current record is <em>H</em> = 246.</p>
+      <p>Assuming a strong unproven hypothesis about how primes are spread across arithmetic progressions (the generalized Elliott–Halberstam conjecture), the bound drops to 6. Getting from 6 to 2 hits a known wall called the <strong>parity problem</strong>.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1919</span>Brun shows the sum of reciprocals of twin primes converges (to Brun's constant, about 1.902). So twin primes, if infinite, are very sparse. This is also where modern sieve theory begins.</li>
+        <li><span class="yr">1923</span>Hardy and Littlewood conjecture the precise count of twin primes.</li>
+        <li><span class="yr">1973</span>Chen proves there are infinitely many primes <em>p</em> where <em>p</em> + 2 is either prime or a product of two primes.</li>
+        <li><span class="yr">2005</span>Goldston, Pintz and Yıldırım show prime gaps can be arbitrarily small compared with the average gap.</li>
+        <li><span class="yr">2013</span>Yitang Zhang proves infinitely many gaps of at most 70,000,000, the first finite bound ever.</li>
+        <li><span class="yr">2013–14</span>Maynard, and independently Tao, find a simpler, stronger sieve. The Polymath8 collaboration then brings the bound down to 246.</li>
+        <li><span class="yr">2016</span>The largest known twin primes are found: 2996863034895 · 2<sup>1290000</sup> ± 1.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Beat the parity barrier.</strong> Selberg showed that classical sieves cannot tell numbers with an odd number of prime factors from those with an even number. Any proof must bring in extra information to break this symmetry. That is how Friedlander and Iwaniec proved there are infinitely many primes of the form <em>a</em>² + <em>b</em>⁴.</li>
+        <li><strong>Improve the level of distribution.</strong> Zhang's key step was to show that primes are well distributed in arithmetic progressions slightly beyond what the Bombieri–Vinogradov theorem gives. Further progress here shrinks the gap bound.</li>
+        <li><strong>Learn from the function field analogue.</strong> Sawin and Shusterman proved a version of the twin prime conjecture for polynomials over certain finite fields. Translating ideas from that setting back to the integers is an active direction.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>List the primes up to 200 and circle every twin pair. Count how many you find in each block of 50 numbers. Do they thin out? Compare your counts with 1.32 · 50 / (ln <em>x</em>)².</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="next" href="goldbach.html">Goldbach's Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

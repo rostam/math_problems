@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seymour's Second Neighborhood Conjecture · Open Problems</title>
+<meta name="description" content="Imagine a social network where &quot;follows&quot; goes one way and nobody follows each other back. Is there always someone whose followers-of-followers (people two steps away who aren't already direct followers) are at least as many as their direct followers?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 19 · Graph theory</div>
+      <h1>Seymour's Second Neighborhood Conjecture</h1>
+      <p>Imagine a social network where "follows" goes one way and nobody follows each other back. Is there always someone whose followers-of-followers (people two steps away who aren't already direct followers) are at least as many as their direct followers?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> In every oriented graph (a directed graph with no 2-cycles), some vertex <em>v</em> has at least as many vertices at distance exactly 2 as at distance 1: |<em>N</em>⁺⁺(<em>v</em>)| ≥ |<em>N</em>⁺(<em>v</em>)|.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Paul Seymour, 1990</div></div>
+      <div class="fact"><div class="k">Proven for</div><div class="v">Tournaments (1996)</div></div>
+      <div class="fact"><div class="k">Best general ratio</div><div class="v">≈ 0.657 (and a bit more)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It captures a basic intuition about influence and spread: in a network without mutual links, someone's reach roughly doubles at the second step.</p>
+      <p>It implies a special case of the <strong>Caccetta–Häggkvist conjecture</strong> on short directed cycles, another major open problem.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Proven for <strong>tournaments</strong>, where every pair of vertices has exactly one arc between them (Fisher, 1996; a simpler proof by Havet and Thomassé, 2000, using "median orders"). Also proven for several other dense or structured classes.</p>
+      <p>In general, Chen, Shen and Yuster (2003) showed some vertex has |<em>N</em>⁺⁺| ≥ γ|<em>N</em>⁺| with γ ≈ 0.657, and there have been small improvements since.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1990</span>Seymour poses the conjecture.</li>
+        <li><span class="yr">1996</span>Fisher proves it for tournaments (Dean's conjecture) using probability.</li>
+        <li><span class="yr">2000</span>Havet and Thomassé give a combinatorial proof for tournaments via median orders.</li>
+        <li><span class="yr">2003</span>Chen, Shen and Yuster prove the γ ≈ 0.657 bound for all oriented graphs.</li>
+        <li><span class="yr">2010s</span>Proven for further classes: dense graphs, graphs with small maximum degree, and others.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Median orders.</strong> Extend the Havet–Thomassé technique from tournaments to graphs with some missing arcs. There has been partial success when few arcs are missing.</li>
+        <li><strong>Push the constant.</strong> Improve γ from about 0.66 toward 1 with sharper counting or weighting arguments.</li>
+        <li><strong>Minimal counterexamples.</strong> Show a smallest counterexample has no "sink-like" vertices and strong regularity, then derive a contradiction.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw 5 people in a circle, each following the next two clockwise. Each person has 2 direct follows and 2 second-step follows, so equality holds. Now remove one arrow and check whether the property still holds.</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="erdos-gyarfas.html">← Erdős–Gyárfás Conjecture</a>
+    <a class="next" href="lovasz.html">Lovász Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

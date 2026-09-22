@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Union-Closed Sets Conjecture (Frankl) · Open Problems</title>
+<meta name="description" content="Take a family of sets where the union of any two sets in the family is also in it. Is some element contained in at least half of the sets?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 11 · Geometry and combinatorics</div>
+      <h1>Union-Closed Sets Conjecture (Frankl)</h1>
+      <p>Take a family of sets where the union of any two sets in the family is also in it. Is some element contained in at least half of the sets?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> If a finite family of sets (not just the empty set) is closed under unions, then some element belongs to at least half of the sets in the family.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Péter Frankl, 1979</div></div>
+      <div class="fact"><div class="k">Best known fraction</div><div class="v">just above 38.2%</div></div>
+      <div class="fact"><div class="k">Target</div><div class="v">50%</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It is one of the most famous "simple" problems in extremal combinatorics. It is also equivalent to natural statements about lattices and about graphs.</p>
+      <p>The 2022 breakthrough is a textbook example of an idea from another field, <strong>information theory</strong> (entropy), suddenly unlocking a decades-old problem.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Before 2022, nobody could even show that some element lies in a <em>fixed positive fraction</em> of the sets.</p>
+      <p>In late 2022, Justin Gilmer (then at Google) proved a fraction of 1%. Within days, several groups improved it to (3 − √5)/2 ≈ 38.2%: Alweiss–Huang–Sellke, Chase–Lovett, Sawin, and others. That number is a natural limit of the entropy method, and only tiny improvements beyond it are known.</p>
+      <p>The conjecture is verified for families on small ground sets and for many special classes.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1979</span>Frankl formulates the conjecture.</li>
+        <li><span class="yr">1990s–2010s</span>Many special cases are proven: small ground sets, families with few sets, lattice formulations and graph versions.</li>
+        <li><span class="yr">2022</span>Gilmer's entropy argument gives the first constant fraction (1%).</li>
+        <li><span class="yr">2022</span>Several groups sharpen it to ≈ 38.2% within weeks, with small improvements beyond.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Refine the entropy method.</strong> Gilmer compares two random sets from the family and bounds the entropy of their union. Pushing past 38.2% seems to need new coupling or correlation ideas.</li>
+        <li><strong>Structural reductions.</strong> Show that a minimal counterexample must have special structure, then rule that structure out.</li>
+        <li><strong>Lattice and graph versions.</strong> The equivalent graph formulation (about maximal stable sets in bipartite graphs) may be easier to attack with graph-theoretic tools.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Take the family {∅, {1}, {2,3}, {1,2,3}} and check that it is closed under unions. Count how many sets contain each element. Now try to build a union-closed family where every element appears in <em>fewer</em> than half the sets. Why does it always fail?</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="hadwiger-nelson.html">← Hadwiger–Nelson Problem</a>
+    <a class="next" href="lonely-runner.html">Lonely Runner Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

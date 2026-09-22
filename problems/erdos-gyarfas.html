@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erdős–Gyárfás Conjecture · Open Problems</title>
+<meta name="description" content="Suppose every vertex in a graph has at least 3 neighbors. Must the graph contain a cycle whose length is a power of 2 (4, 8, 16, …)?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 18 · Graph theory</div>
+      <h1>Erdős–Gyárfás Conjecture</h1>
+      <p>Suppose every vertex in a graph has at least 3 neighbors. Must the graph contain a cycle whose length is a power of 2 (4, 8, 16, …)?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every graph in which every vertex has degree at least 3 contains a cycle whose length is a power of 2.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Erdős and Gyárfás, 1995</div></div>
+      <div class="fact"><div class="k">Smallest counterexample</div><div class="v">would need at least 17 vertices</div></div>
+      <div class="fact"><div class="k">Large-degree version</div><div class="v">Proven (Liu–Montgomery)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It is about the <strong>cycle spectrum</strong>: which cycle lengths a graph must contain. Minimum degree 3 forces many cycles, and the question is whether they can all dodge the powers of 2, which get sparser as they grow.</p>
+      <p>Erdős offered money for it: $100 for a proof and $50 for a counterexample. This reflects his belief that it is true but that a counterexample wouldn't be shocking.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Known for several classes, including claw-free graphs and 3-connected cubic planar graphs (Heckman and Krakovski, 2013).</p>
+      <p>Computer searches show any counterexample must have at least 17 vertices, and a cubic one at least 30.</p>
+      <p>Liu and Montgomery proved that if the minimum (or average) degree is large enough, the graph must contain a cycle of power-of-2 length. The difficulty is the small value 3.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1995</span>Erdős and Gyárfás pose the conjecture.</li>
+        <li><span class="yr">2000s</span>Proven for claw-free graphs and several other classes. Computer searches establish lower bounds on counterexamples.</li>
+        <li><span class="yr">2013</span>Heckman and Krakovski prove it for 3-connected cubic planar graphs.</li>
+        <li><span class="yr">2020–23</span>Liu and Montgomery prove the large-degree version with sublinear expanders.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Lower the degree threshold.</strong> Liu and Montgomery's expander methods need a large constant. Reducing it toward 3 would be decisive.</li>
+        <li><strong>Cubic graphs first.</strong> A minimal counterexample can be assumed to be nearly cubic, which is a very structured setting for case analysis and computer search.</li>
+        <li><strong>Cycle-length arithmetic.</strong> Results showing that graphs contain cycles of many consecutive lengths, or lengths in many residue classes, might be sharpened to hit a power of 2.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw the Petersen graph (every vertex has degree 3) and find a cycle of length 8. Then try the complete bipartite graph <em>K</em>₃,₃, which has cycles of length 4 immediately. Can you design a degree-3 graph whose shortest cycle has length 5 and that avoids length 8?</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="hadwiger.html">← Hadwiger's Conjecture</a>
+    <a class="next" href="second-neighborhood.html">Seymour's Second Neighborhood Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

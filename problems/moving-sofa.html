@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moving Sofa Problem · Open Problems</title>
+<meta name="description" content="What is the largest shape you can carry around a right-angled corner in a hallway 1 unit wide?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 9 · Geometry and combinatorics</div>
+      <h1>Moving Sofa Problem</h1>
+      <p>What is the largest shape you can carry around a right-angled corner in a hallway 1 unit wide?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Find the rigid planar shape of largest area that can be moved around a right-angled corner in a hallway of width 1.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Leo Moser, 1966</div></div>
+      <div class="fact"><div class="k">Best known sofa</div><div class="v">Gerver's, area ≈ 2.2195</div></div>
+      <div class="fact"><div class="k">Claimed proof</div><div class="v">Jineon Baek, 2024</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It is a clean example of <strong>shape optimization</strong>, where the unknown is an entire shape rather than a number. Problems like this are notoriously hard because the space of possible shapes is infinite-dimensional.</p>
+      <p>It has become a test case for combining geometric insight with computer-assisted proofs.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Possibly solved. In 2024 Jineon Baek posted a proof, over 100 pages long, that Gerver's sofa is optimal. Experts are still checking it. Before that, the best upper bound was about 2.37 (Kallus and Romik, 2018).</p>
+      <p>Gerver's sofa is bounded by 18 distinct curve pieces. The claimed answer, about 2.2195, has no known simple closed form.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1966</span>Leo Moser poses the problem.</li>
+        <li><span class="yr">1968</span>Hammersley finds a telephone-shaped sofa of area π/2 + 2/π ≈ 2.2074, and proves no sofa can exceed 2√2 ≈ 2.83.</li>
+        <li><span class="yr">1992</span>Gerver finds a slightly better sofa (≈ 2.2195) and conjectures it is optimal.</li>
+        <li><span class="yr">2018</span>Kallus and Romik use computer-assisted proofs to show no sofa exceeds 2.37. Romik also finds exact formulas for Gerver's sofa and solves an "ambidextrous" variant.</li>
+        <li><span class="yr">2024</span>Baek claims a full proof that Gerver's sofa is optimal.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Verify Baek's proof.</strong> The most important current task is careful checking and, ideally, simplification.</li>
+        <li><strong>Convex relaxation.</strong> Baek's approach reformulates the problem so that an upper bound becomes a concave optimization, which can be solved exactly. Finding simpler relaxations could give a shorter proof.</li>
+        <li><strong>Variants.</strong> Other corridor angles, three-dimensional versions and ambidextrous sofas are open and may be more approachable.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Cut shapes out of paper and push them around an L-shaped corridor drawn with 1-unit width (say 5 cm). A semicircle of radius 1 (area ≈ 1.57) works. Can you beat Hammersley's 2.2074 by hand?</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="inscribed-square.html">← Inscribed Square Problem (Toeplitz)</a>
+    <a class="next" href="hadwiger-nelson.html">Hadwiger–Nelson Problem →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

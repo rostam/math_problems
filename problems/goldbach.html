@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goldbach's Conjecture · Open Problems</title>
+<meta name="description" content="Is every even number greater than 2 the sum of two primes? For example, 28 = 5 + 23.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 2 · Number theory</div>
+      <h1>Goldbach's Conjecture</h1>
+      <p>Is every even number greater than 2 the sum of two primes? For example, 28 = 5 + 23.</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every even integer greater than 2 can be written as the sum of two primes.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Goldbach's letter to Euler, 1742</div></div>
+      <div class="fact"><div class="k">Verified up to</div><div class="v">4 × 10¹⁸</div></div>
+      <div class="fact"><div class="k">Weak version</div><div class="v">Proven (Helfgott, 2013)</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It is one of the oldest and best-known unsolved problems in all of mathematics. It is a pure test of how primes interact with <em>addition</em>. Primes are defined by multiplication, so questions mixing them with addition tend to be very hard.</p>
+      <p>The attempts have produced lasting tools: the Hardy–Littlewood <strong>circle method</strong>, Vinogradov's estimates for exponential sums, and much of modern sieve theory.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. The <strong>weak</strong> (ternary) Goldbach conjecture says every odd number greater than 5 is a sum of three primes. Harald Helfgott proved it completely in 2013.</p>
+      <p>For the original (binary) version, we know that <em>almost all</em> even numbers are sums of two primes: any exceptions are extremely rare. We also know every large enough even number is a prime plus a number with at most two prime factors (Chen).</p>
+      <p>The number of ways to write 2<em>n</em> as a sum of two primes appears to grow steadily with <em>n</em>. A plot of these counts, called the "Goldbach comet", makes it very believable that the count never drops to zero.</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1742</span>Christian Goldbach writes to Euler proposing the conjecture.</li>
+        <li><span class="yr">1923</span>Hardy and Littlewood develop the circle method and give a conditional attack on the ternary problem.</li>
+        <li><span class="yr">1930</span>Schnirelmann proves every integer greater than 1 is a sum of at most some fixed number of primes.</li>
+        <li><span class="yr">1937</span>Vinogradov proves the weak conjecture for all sufficiently large odd numbers.</li>
+        <li><span class="yr">1938</span>Chudakov, van der Corput and Estermann show almost all even numbers are sums of two primes.</li>
+        <li><span class="yr">1973</span>Chen: every large even number is prime + (prime or semiprime).</li>
+        <li><span class="yr">2013</span>Helfgott completes the proof of the weak Goldbach conjecture. Oliveira e Silva, Herzog and Pardi verify the binary one up to 4 × 10¹⁸.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Circle method.</strong> This method counts representations by integrating an exponential sum around a circle. For three primes, the "minor arcs" (the messy part) can be controlled. For two primes they cannot. Any new way to bound that error term would be a breakthrough.</li>
+        <li><strong>Sieve plus parity.</strong> As with twin primes, sieves stall at "prime plus almost-prime" because of the parity problem. Ideas that break parity for one problem often transfer to the other.</li>
+        <li><strong>Shrink the exceptional set.</strong> Proving that the number of exceptions up to <em>x</em> is at most <em>x</em><sup>δ</sup> for ever smaller δ is steady, measurable progress.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>For each even number from 4 to 100, count how many ways it can be written as a sum of two primes. Plot the counts. You have drawn the start of the Goldbach comet. Which numbers have unusually many representations? (Hint: look at multiples of 3 and 5.)</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="twin-primes.html">← Twin Prime Conjecture</a>
+    <a class="next" href="collatz.html">Collatz Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

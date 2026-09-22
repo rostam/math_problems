@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is π + e irrational? · Open Problems</title>
+<meta name="description" content="We know π and e are each irrational, but not whether their sum or product is.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 13 · Numbers themselves</div>
+      <h1>Is π + e irrational?</h1>
+      <p>We know π and e are each irrational, but not whether their sum or product is.</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Is π + <em>e</em> irrational? Is π<em>e</em>? Is Euler's constant γ = lim (1 + 1/2 + ⋯ + 1/<em>n</em> − ln <em>n</em>) ≈ 0.5772 irrational?</div>
+    <div class="facts">
+      <div class="fact"><div class="k">π transcendental</div><div class="v">Lindemann, 1882</div></div>
+      <div class="fact"><div class="k">e transcendental</div><div class="v">Hermite, 1873</div></div>
+      <div class="fact"><div class="k">Known</div><div class="v">At least one of π + e and πe is transcendental</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>These questions show how little we can prove about specific numbers. Almost every real number is transcendental, yet proving it for any <em>particular</em> number is extremely hard.</p>
+      <p>They test <strong>transcendence theory</strong> directly. A central conjecture there, Schanuel's conjecture, would settle π + <em>e</em> and thousands of similar questions at once.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. One easy fact: π + <em>e</em> and π<em>e</em> can't both be rational, or even both algebraic. If they were, π and <em>e</em> would be roots of <em>x</em>² − (π+<em>e</em>)<em>x</em> + π<em>e</em>, making them algebraic, which they are not. But we don't know which of the two is transcendental.</p>
+      <p>For γ, not even irrationality is known. If γ were a fraction, its denominator would need hundreds of thousands of digits.</p>
+      <p>Some related results <em>are</em> known. <em>e</em><sup>π</sup> is transcendental (Gelfond–Schneider). π and <em>e</em><sup>π</sup> are algebraically independent (Nesterenko, 1996). ζ(3) is irrational (Apéry, 1978).</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1737</span>Euler proves <em>e</em> is irrational.</li>
+        <li><span class="yr">1761</span>Lambert proves π is irrational.</li>
+        <li><span class="yr">1873–82</span>Hermite (<em>e</em>) and Lindemann (π) prove transcendence.</li>
+        <li><span class="yr">1934</span>Gelfond and Schneider: <em>a</em><sup><em>b</em></sup> is transcendental for algebraic <em>a</em> ≠ 0, 1 and irrational algebraic <em>b</em>. This gives <em>e</em><sup>π</sup> = (−1)<sup>−i</sup>.</li>
+        <li><span class="yr">1960s</span>Schanuel formulates his conjecture.</li>
+        <li><span class="yr">1978</span>Apéry shocks the community by proving ζ(3) is irrational.</li>
+        <li><span class="yr">1996</span>Nesterenko proves π, <em>e</em><sup>π</sup> and Γ(1/4) are algebraically independent.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Schanuel's conjecture.</strong> It implies that π and <em>e</em> are algebraically independent, which settles the question immediately. Proving it would be a revolution.</li>
+        <li><strong>Apéry-style approximations.</strong> Find a sequence of fractions converging to γ (or π + <em>e</em>) so fast that the number can't be rational. This is how irrationality of ζ(3) was proven.</li>
+        <li><strong>Periods.</strong> Kontsevich and Zagier define "periods" (integrals of algebraic functions). π is a period, and <em>e</em> and γ are conjectured not to be. Understanding periods may clarify which relations can hold.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Compute π + <em>e</em> ≈ 5.859874482… to many digits and find its continued fraction expansion (many calculators and websites do this). Rational numbers have finite continued fractions. Does yours look like it will stop?</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="lonely-runner.html">← Lonely Runner Conjecture</a>
+    <a class="next" href="ramsey-r55.html">Ramsey number R(5,5) →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

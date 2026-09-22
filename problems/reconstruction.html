@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reconstruction Conjecture (Kelly–Ulam) · Open Problems</title>
+<meta name="description" content="Suppose you are given every copy of a graph with one vertex deleted, as an unlabeled &quot;deck of cards.&quot; Can you always rebuild the original graph, as long as it has at least 3 vertices?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">← All open problems</a></div>
+  <article>
+    <header>
+      <div class="kicker">Problem 15 · Graph theory</div>
+      <h1>Reconstruction Conjecture (Kelly–Ulam)</h1>
+      <p>Suppose you are given every copy of a graph with one vertex deleted, as an unlabeled "deck of cards." Can you always rebuild the original graph, as long as it has at least 3 vertices?</p>
+    </header>
+    <div class="statement"><strong>Statement.</strong> Every graph with at least 3 vertices is determined, up to isomorphism, by its <em>deck</em>: the multiset of unlabeled graphs obtained by deleting each vertex in turn.</div>
+    <div class="facts">
+      <div class="fact"><div class="k">First posed</div><div class="v">Kelly and Ulam, 1941–42</div></div>
+      <div class="fact"><div class="k">Verified</div><div class="v">All graphs up to 13 vertices</div></div>
+      <div class="fact"><div class="k">Almost all graphs</div><div class="v">Reconstructible from 3 cards</div></div>
+    </div>
+
+    <section>
+      <h2>Why it matters</h2>
+      <p>It asks how much global information is stored in local pieces. That is a central theme across mathematics and computer science.</p>
+      <p>Similar questions arise elsewhere: reconstructing molecules from fragments in chemistry, DNA from reads in biology, and structures from partial views in data science.</p>
+    </section>
+
+    <section>
+      <h2>Where things stand</h2>
+      <p>Open. Proven for many classes: trees, disconnected graphs, regular graphs, and maximal planar graphs. Bollobás showed that almost every graph is determined by just 3 of its cards.</p>
+      <p>The conjecture <em>fails</em> for directed graphs (Stockmeyer's infinite families), for hypergraphs and for infinite graphs. So any proof must use something special about finite undirected graphs.</p>
+      <p>A related <strong>edge</strong> reconstruction conjecture (using edge-deleted cards) is proven for graphs with many edges relative to the number of vertices (Lovász, Müller).</p>
+    </section>
+
+    <section>
+      <h2>History of attempts</h2>
+      <ul class="timeline">
+        <li><span class="yr">1941</span>Kelly and Ulam formulate the conjecture.</li>
+        <li><span class="yr">1957</span>Kelly proves it for trees. "Kelly's lemma": the deck determines how many copies of each smaller subgraph the graph contains.</li>
+        <li><span class="yr">1972–77</span>Lovász and Müller prove edge reconstruction for dense graphs.</li>
+        <li><span class="yr">1977</span>Stockmeyer shows reconstruction fails for directed graphs.</li>
+        <li><span class="yr">1990</span>Bollobás: almost every graph is reconstructible from 3 cards.</li>
+        <li><span class="yr">1997</span>McKay verifies all graphs up to 11 vertices, later extended to 13.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideas for solving it</h2>
+      <ul>
+        <li><strong>Counting (Kelly's lemma).</strong> Extract ever more invariants from the deck, such as the degree sequence, spectrum, subgraph counts and the characteristic polynomial. The hope is to eventually pin down the whole graph.</li>
+        <li><strong>Minimal counterexamples.</strong> Show a smallest counterexample must be highly structured (for example, nearly regular with few automorphisms) and then rule those out.</li>
+        <li><strong>Algebraic and spectral methods.</strong> Recent work studies which spectral data the deck determines and uses it for special classes.</li>
+      </ul>
+    </section>
+
+    <section class="try">
+      <h2>Try it yourself</h2>
+      <p>Draw a 4-vertex path and a star with 3 leaves. Write out the deck of each (4 cards, each a 3-vertex graph). Can you tell them apart from the decks alone? Then try to find two different graphs with the same deck. (Only the 2-vertex graphs work, which is why the conjecture needs 3 or more vertices.)</p>
+    </section>
+  </article>
+
+  <nav class="pager">
+    <a class="prev" href="ramsey-r55.html">← Ramsey number R(5,5)</a>
+    <a class="next" href="graceful-tree.html">Graceful Tree Conjecture →</a>
+  </nav>
+  <footer>Status reflects published results as of the date below; recent claims may still be under review. Last updated September 2026.</footer>
+</div>
+</body>
+</html>

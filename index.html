@@ -8,114 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #faf8f4;
-    --surface: #ffffff;
-    --text: #1d1b18;
-    --muted: #6b665e;
-    --border: #e6e1d8;
-    --accent: #9a3b1b;
-    --accent-soft: #f5e6de;
-    --pick: #2f6b3a;
-    --pick-soft: #e3f0e5;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #161513;
-      --surface: #1f1d1a;
-      --text: #ece8e1;
-      --muted: #a39d93;
-      --border: #34312c;
-      --accent: #e38a64;
-      --accent-soft: #3a261d;
-      --pick: #8cc998;
-      --pick-soft: #1f3123;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #161513;
-    --surface: #1f1d1a;
-    --text: #ece8e1;
-    --muted: #a39d93;
-    --border: #34312c;
-    --accent: #e38a64;
-    --accent-soft: #3a261d;
-    --pick: #8cc998;
-    --pick-soft: #1f3123;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.6 "Inter", system-ui, sans-serif;
-  }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 56px 16px 80px; }
-  header h1 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(2rem, 6vw, 3rem);
-    line-height: 1.1;
-    margin: 0 0 12px;
-  }
-  header p { color: var(--muted); margin: 0; max-width: 60ch; }
-  nav {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin: 28px 0 8px;
-  }
-  nav a {
-    font-size: 0.875rem; font-weight: 500;
-    color: var(--accent); background: var(--accent-soft);
-    padding: 4px 12px; border-radius: 999px; text-decoration: none;
-  }
-  nav a:hover { text-decoration: underline; }
-  section { margin-top: 48px; }
-  h2 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 600; font-size: 1.5rem;
-    margin: 0 0 16px; padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-  .intro { color: var(--muted); margin: -4px 0 16px; }
-  ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-  li {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px 16px 60px;
-    position: relative;
-  }
-  li .n {
-    position: absolute; left: 18px; top: 16px;
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 600; color: var(--accent); font-size: 1.1rem;
-  }
-  li h3 { margin: 0 0 4px; font-size: 1.05rem; font-weight: 600; }
-  li p { margin: 0; }
-  li .status { margin-top: 6px; color: var(--muted); font-size: 0.925rem; }
-  .pick {
-    display: inline-block; margin-left: 8px; vertical-align: 2px;
-    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-    color: var(--pick); background: var(--pick-soft);
-    padding: 1px 8px; border-radius: 999px;
-  }
-  footer { margin-top: 64px; color: var(--muted); font-size: 0.875rem; }
-  @media (max-width: 480px) {
-    li { padding-left: 48px; }
-    li .n { left: 14px; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
   <header>
     <h1>Open Problems in Mathematics</h1>
-    <p>Famous unsolved problems that are easy to state. Problems tagged <span class="pick">easy to explain</span> are especially good for a general audience: you can try examples by hand.</p>
-    <nav>
+    <p>Famous unsolved problems that are easy to state. Click any problem for its history, current status, why it matters, and ideas for attacking it. Problems tagged <span class="pick">easy to explain</span> are especially good for a general audience: you can try examples by hand.</p>
+    <nav class="toc">
       <a href="#number-theory">Number theory</a>
-      <a href="#cs-logic">Computer science</a>
-      <a href="#geometry">Geometry &amp; combinatorics</a>
+      <a href="#cs-logic">Computer science and logic</a>
+      <a href="#geometry">Geometry and combinatorics</a>
       <a href="#numbers">Numbers themselves</a>
       <a href="#graph-theory">Graph theory</a>
     </nav>
@@ -123,86 +26,99 @@
 
   <section id="number-theory">
     <h2>Number theory</h2>
-    <ol>
+    <ol class="cards">
       <li><span class="n">1</span>
-        <h3>Twin Prime Conjecture <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/twin-primes.html">Twin Prime Conjecture</a> <span class="pick">easy to explain</span></h3>
         <p>Are there infinitely many pairs of primes that differ by 2, like (3, 5), (11, 13) and (17, 19)?</p>
         <p class="status">Zhang (2013) and Maynard proved that infinitely many prime pairs differ by at most 246. The gap of 2 is still unproven.</p>
+        <a class="more" href="problems/twin-primes.html">History, status and approaches →</a>
       </li>
       <li><span class="n">2</span>
-        <h3>Goldbach's Conjecture <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/goldbach.html">Goldbach's Conjecture</a> <span class="pick">easy to explain</span></h3>
         <p>Is every even number greater than 2 the sum of two primes? For example, 28 = 5 + 23.</p>
         <p class="status">Checked up to 4 × 10¹⁸ but never proven.</p>
+        <a class="more" href="problems/goldbach.html">History, status and approaches →</a>
       </li>
       <li><span class="n">3</span>
-        <h3>Collatz Conjecture <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/collatz.html">Collatz Conjecture</a> <span class="pick">easy to explain</span></h3>
         <p>Pick any positive integer. If it's even, halve it. If it's odd, triple it and add 1. Does every starting number eventually reach 1?</p>
         <p class="status">Paul Erdős said "mathematics is not yet ready for such problems."</p>
+        <a class="more" href="problems/collatz.html">History, status and approaches →</a>
       </li>
       <li><span class="n">4</span>
-        <h3>Odd Perfect Numbers</h3>
+        <h3><a href="problems/odd-perfect-numbers.html">Odd Perfect Numbers</a></h3>
         <p>A perfect number equals the sum of its proper divisors: 6 = 1 + 2 + 3, and 28 = 1 + 2 + 4 + 7 + 14. Every known perfect number is even. Does an odd one exist?</p>
+        <a class="more" href="problems/odd-perfect-numbers.html">History, status and approaches →</a>
       </li>
       <li><span class="n">5</span>
-        <h3>Riemann Hypothesis</h3>
+        <h3><a href="problems/riemann-hypothesis.html">Riemann Hypothesis</a></h3>
         <p>A claim about where the zeros of a certain function lie. Put simply, it says the primes are spread out as evenly as they can be.</p>
         <p class="status">A Millennium Prize problem worth $1M. Hundreds of other results assume it is true.</p>
+        <a class="more" href="problems/riemann-hypothesis.html">History, status and approaches →</a>
       </li>
       <li><span class="n">6</span>
-        <h3>Legendre's Conjecture</h3>
+        <h3><a href="problems/legendre.html">Legendre's Conjecture</a></h3>
         <p>Is there always a prime between n² and (n+1)²?</p>
+        <a class="more" href="problems/legendre.html">History, status and approaches →</a>
       </li>
     </ol>
   </section>
 
   <section id="cs-logic">
     <h2>Computer science and logic</h2>
-    <ol>
+    <ol class="cards">
       <li><span class="n">7</span>
-        <h3>P vs NP</h3>
+        <h3><a href="problems/p-vs-np.html">P vs NP</a></h3>
         <p>If a solution is quick to <em>check</em>, is it also quick to <em>find</em>? Sudoku is an example: checking a filled grid is easy, but solving one seems hard.</p>
         <p class="status">Most online security assumes P ≠ NP. Also a $1M Millennium Prize problem.</p>
+        <a class="more" href="problems/p-vs-np.html">History, status and approaches →</a>
       </li>
     </ol>
   </section>
 
   <section id="geometry">
     <h2>Geometry and combinatorics</h2>
-    <ol>
+    <ol class="cards">
       <li><span class="n">8</span>
-        <h3>Inscribed Square Problem (Toeplitz) <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/inscribed-square.html">Inscribed Square Problem (Toeplitz)</a> <span class="pick">easy to explain</span></h3>
         <p>Does every closed loop drawn without crossing itself contain four points that form a square?</p>
         <p class="status">Proven for smooth curves, still open for arbitrary continuous ones.</p>
+        <a class="more" href="problems/inscribed-square.html">History, status and approaches →</a>
       </li>
       <li><span class="n">9</span>
-        <h3>Moving Sofa Problem</h3>
+        <h3><a href="problems/moving-sofa.html">Moving Sofa Problem</a></h3>
         <p>What is the largest shape you can carry around a right-angled corner in a hallway 1 unit wide?</p>
         <p class="status">Baek claimed a solution in 2024, and it is still being verified.</p>
+        <a class="more" href="problems/moving-sofa.html">History, status and approaches →</a>
       </li>
       <li><span class="n">10</span>
-        <h3>Hadwiger–Nelson Problem</h3>
+        <h3><a href="problems/hadwiger-nelson.html">Hadwiger–Nelson Problem</a></h3>
         <p>What is the fewest colors needed to color every point of the plane so that no two points exactly 1 unit apart share a color?</p>
         <p class="status">The answer is known to be 5, 6 or 7.</p>
+        <a class="more" href="problems/hadwiger-nelson.html">History, status and approaches →</a>
       </li>
       <li><span class="n">11</span>
-        <h3>Union-Closed Sets Conjecture (Frankl)</h3>
+        <h3><a href="problems/union-closed-sets.html">Union-Closed Sets Conjecture (Frankl)</a></h3>
         <p>Take a family of sets where the union of any two sets in the family is also in it. Is some element contained in at least half of the sets?</p>
         <p class="status">Gilmer made major progress in 2022, but the full claim is still open.</p>
+        <a class="more" href="problems/union-closed-sets.html">History, status and approaches →</a>
       </li>
       <li><span class="n">12</span>
-        <h3>Lonely Runner Conjecture</h3>
-        <p>n runners start together on a circular track, each at a different constant speed. Does every runner at some moment end up at least 1/(n+1) of a lap away from all the others?</p>
+        <h3><a href="problems/lonely-runner.html">Lonely Runner Conjecture</a></h3>
+        <p>n runners start together on a circular track of length 1, each at a different constant speed. Does every runner at some moment end up at least 1/n of a lap away from all the others?</p>
+        <a class="more" href="problems/lonely-runner.html">History, status and approaches →</a>
       </li>
     </ol>
   </section>
 
   <section id="numbers">
     <h2>Numbers themselves</h2>
-    <ol>
+    <ol class="cards">
       <li><span class="n">13</span>
-        <h3>Is π + e irrational?</h3>
+        <h3><a href="problems/pi-plus-e.html">Is π + e irrational?</a></h3>
         <p>We know π and e are each irrational, but not whether their sum or product is.</p>
         <p class="status">The same question is open for the Euler–Mascheroni constant γ.</p>
+        <a class="more" href="problems/pi-plus-e.html">History, status and approaches →</a>
       </li>
     </ol>
   </section>
@@ -210,51 +126,59 @@
   <section id="graph-theory">
     <h2>Graph theory</h2>
     <p class="intro">A <strong>graph</strong> here means a set of dots (vertices) joined by lines (edges).</p>
-    <ol>
+    <ol class="cards">
       <li><span class="n">14</span>
-        <h3>Ramsey number R(5,5) <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/ramsey-r55.html">Ramsey number R(5,5)</a> <span class="pick">easy to explain</span></h3>
         <p>How many people must be at a party to guarantee that 5 of them all know each other, or 5 of them are all strangers? For groups of 3 the answer is 6, and for groups of 4 it is 18.</p>
         <p class="status">For groups of 5 it is only known to be between 43 and 46. Erdős joked that if aliens demanded this number, we should put every computer on Earth to work on it. If they asked for R(6,6), we should attack them instead.</p>
+        <a class="more" href="problems/ramsey-r55.html">History, status and approaches →</a>
       </li>
       <li><span class="n">15</span>
-        <h3>Reconstruction Conjecture (Kelly–Ulam) <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/reconstruction.html">Reconstruction Conjecture (Kelly–Ulam)</a> <span class="pick">easy to explain</span></h3>
         <p>Suppose you are given every copy of a graph with one vertex deleted, as an unlabeled "deck of cards." Can you always rebuild the original graph, as long as it has at least 3 vertices?</p>
         <p class="status">Confirmed by computer for all graphs with up to 13 vertices.</p>
+        <a class="more" href="problems/reconstruction.html">History, status and approaches →</a>
       </li>
       <li><span class="n">16</span>
-        <h3>Graceful Tree Conjecture <span class="pick">easy to explain</span></h3>
+        <h3><a href="problems/graceful-tree.html">Graceful Tree Conjecture</a> <span class="pick">easy to explain</span></h3>
         <p>A tree is a connected graph with no loops. Take any tree with n vertices. Can you label its vertices 0, 1, …, n−1 so that the edge differences |a − b| are exactly 1, 2, …, n−1, each used once?</p>
         <p class="status">Checked by computer for every small tree, and a related conjecture by Ringel was proven in 2020. The general case is still open.</p>
+        <a class="more" href="problems/graceful-tree.html">History, status and approaches →</a>
       </li>
       <li><span class="n">17</span>
-        <h3>Hadwiger's Conjecture</h3>
+        <h3><a href="problems/hadwiger.html">Hadwiger's Conjecture</a></h3>
         <p>A far-reaching generalization of the Four Color Theorem. Suppose a graph needs k colors so that neighboring vertices get different colors. Then, by deleting and contracting edges, you should be able to shrink it into k vertices that are all joined to each other.</p>
         <p class="status">Proven for k ≤ 6, open for every larger k.</p>
+        <a class="more" href="problems/hadwiger.html">History, status and approaches →</a>
       </li>
       <li><span class="n">18</span>
-        <h3>Erdős–Gyárfás Conjecture</h3>
+        <h3><a href="problems/erdos-gyarfas.html">Erdős–Gyárfás Conjecture</a></h3>
         <p>Suppose every vertex in a graph has at least 3 neighbors. Must the graph contain a cycle whose length is a power of 2 (4, 8, 16, …)?</p>
+        <a class="more" href="problems/erdos-gyarfas.html">History, status and approaches →</a>
       </li>
       <li><span class="n">19</span>
-        <h3>Seymour's Second Neighborhood Conjecture</h3>
+        <h3><a href="problems/second-neighborhood.html">Seymour's Second Neighborhood Conjecture</a></h3>
         <p>Imagine a social network where "follows" goes one way and nobody follows each other back. Is there always someone whose followers-of-followers (people two steps away who aren't already direct followers) are at least as many as their direct followers?</p>
+        <a class="more" href="problems/second-neighborhood.html">History, status and approaches →</a>
       </li>
       <li><span class="n">20</span>
-        <h3>Lovász Conjecture</h3>
+        <h3><a href="problems/lovasz.html">Lovász Conjecture</a></h3>
         <p>Call a graph "symmetric" if every vertex looks exactly like every other vertex. Does every connected symmetric graph have a path that visits each vertex exactly once?</p>
         <p class="status">Only five connected symmetric graphs are known that have no closed tour through every vertex. The Petersen graph is one of them.</p>
+        <a class="more" href="problems/lovasz.html">History, status and approaches →</a>
       </li>
       <li><span class="n">21</span>
-        <h3>Cycle Double Cover Conjecture</h3>
+        <h3><a href="problems/cycle-double-cover.html">Cycle Double Cover Conjecture</a></h3>
         <p>Take any graph with no bridge, meaning no single edge whose removal disconnects it. Can you always pick a collection of cycles that covers every edge exactly twice?</p>
+        <a class="more" href="problems/cycle-double-cover.html">History, status and approaches →</a>
       </li>
       <li><span class="n">22</span>
-        <h3>Total Coloring Conjecture</h3>
+        <h3><a href="problems/total-coloring.html">Total Coloring Conjecture</a></h3>
         <p>Color both the vertices and the edges of a graph so that touching items always get different colors. If the busiest vertex has Δ edges, you clearly need at least Δ + 1 colors. Is Δ + 2 always enough?</p>
+        <a class="more" href="problems/total-coloring.html">History, status and approaches →</a>
       </li>
     </ol>
   </section>
-
   <footer>Last updated September 2026.</footer>
 </div>
 </body>
